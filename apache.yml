@@ -1,0 +1,6 @@
+- hosts: apache
+  become: true
+  tasks:
+    - name: Install apache httpd
+      apt:
+        name: apache2
