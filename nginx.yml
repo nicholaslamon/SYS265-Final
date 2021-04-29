@@ -1,0 +1,7 @@
+- name: nginx Group1
+  become: true
+  hosts: nginx
+  roles: 
+    - role: suzuki-shunsuke.nginx_centos
+      nginx_started: true
+     
