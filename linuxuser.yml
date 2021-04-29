@@ -1,0 +1,13 @@
+- hosts: l_user
+  become: true
+  tasks:
+    - name: Linux Local User Add
+      user:
+        name: group1-test
+        comment: Group1 Test User
+        password: 'sha-512'
+        update_password: on_create
+        shell: /bin/bash
+        system: no
+        createhome: yes
+        home: /home/group1-test
