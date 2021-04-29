@@ -1,0 +1,13 @@
+- name: Work with AD
+  hosts: windows
+  tasks:
+    - name: Add Domain user Nick Lamon
+      win_domain_user:
+      name: nick
+      firstname: Nick
+      surname: Lamon
+      password: Project1
+      state: present
+      domain_username: group1\project1-adm
+      domain_password: Project1
+      domain_server: group1.local
