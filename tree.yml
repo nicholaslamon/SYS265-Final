@@ -1,0 +1,6 @@
+- hosts: tree
+  become: true
+  tasks: 
+    - name: install tree
+      yum:
+         name: tree
